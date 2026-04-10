@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Developer Dictionary</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header id="encabezado">
+            <img id="logoPagina" src="./assets/icons/icons8-código-de-inspección-48.png" alt="" width="40px" height="40px">
+            <h1 id="h1">Developer Dictionary</h1>
+            
+            <div id="contenedorCarritoIcono">
+                <img id="LogoCarrito" src="./assets/icons/icons8-carrito-de-compras-48.png" alt="Carrito" width="30px" height="30px">
+                <span id="contadorCarrito">0</span>
+            </div>
+
+            <div id="menuCarrito" class="oculto">
+                <h3 style="margin-top: 0; text-align: center;">Tu Carrito</h3>
+                <div id="listaProductosCarrito">
+                    </div>
+                <div id="totalCarritoContainer">
+                    <strong>Total: </strong><span id="totalCarrito">$0 COP</span>
+                </div>
+                <button id="btnPagar" class="botonesTarjetas" style="width: 100%; margin-top: 15px; font-size: 14px;">Proceder al Pago</button>
+            </div>
+        </header>
+
+        <section id="sectionUno">
+            <div id="contenedorLogosRedes">
+                <a href="https://www.instagram.com/jesusgelizz_/" target="_blank" class="boton-imagen">
+                    <img class="logosRedes" src="./assets/img/instagram-new.png" alt="Ir a Instagram" width="30px">
+                </a>
+                <a href="mailto:jesusgeliz800@gmail.com" target="_blank" class="boton-imagen">
+                    <img class="logosRedes" src="./assets/img/gmail-new.png" alt="Ir a Instagram" width="30px">
+                </a>
+            </div>
+            <div id="hero">
+                <h2>¡Enriquece tu conocimiento!</h2>
+                <img id="logosLenguajesHero" src="./assets/img/kindpng_4529239.png" alt="" width="300px">
+                <h4>Domina el vocabulario del desarrollo. Explora nuestra colección de <br>
+                    paquetes de terminología de programación, desde definiciones básicas <br>
+                    hasta conceptos avanzados<span id="cursor"></span>
+                </h4>
+            </div>
+        </section>
+
+        <section id="sectionDos">
+            <h2>Paquetes de Terminología</h2>
+            <div id="contenedorTarjetas">
+                <div class="tarjetas" id="tarjetaUno">
+                    <div class="contenidoTarjetas">
+                        <img class="logoTarjetas" src="./assets/img/CSS3_logo_and_wordmark.svg.png" alt="" width="100px">
+                        <h3 class="tituloTarjetas">Paquete de definiciones HTML</h3>
+                        <div class="etiquetaTarjeta">Basico</div>
+                        <p class="parrafoTarjetas">Comienza tu viaje en el desarrollo con <br>
+                        definiciones esenciales de HTML y semántica <br>
+                        web básica.</p>
+                        <ul class="listasTarjetas">
+                            <li>200+ términos HTML</li>
+                            <li>Definiciones claras</li>
+                            <li>Ejemplos de código</li>
+                            <li>Actualizaciones <br>de por vida</li>
+                        </ul>
+                        <p class="valorSuscripcionTarjetas">4.999 COP</p>
+                        <button class="botonesTarjetas" id="botonGratisTarjetas">Añadir al carrito</button>
+                    </div>  
+                </div>
+
+                <div class="tarjetas" id="tarjetaDos">
+                    <div class="contenidoTarjetas">
+                        <img class="logoTarjetas" src="./assets/img/css3(1).png" alt="" width="90px">
+                        <h3 class="tituloTarjetas">Ejemplos interactivos de CSS</h3>
+                        <div class="etiquetaTarjeta">Estandar</div>
+                        <p class="parrafoTarjetas">Profundiza en el estilizado con ejemplos <br>
+                        interactivos, assets visuales y explicaciones <br>
+                        detalladas.</p>
+                        <ul class="listasTarjetas">
+                            <li>500+ términos CSS</li>
+                            <li>Definiciones claras</li>
+                            <li>Ejemplos de código</li>
+                            <li>Assets visuales</li>
+                            <li>Actualizaciones <br>de por vida</li>
+                        </ul>
+                        <p class="valorSuscripcionTarjetas">$9.999 COP</p>
+                        <button class="botonesTarjetas">Añadir al carrito</button>
+                    </div>
+                    
+                </div>
+                <div class="tarjetas" id="tarjetaTres">
+                    <div class="contenidoTarjetas">
+                        <img class="logoTarjetas" src="./assets/img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="" width="105px">
+                        <h3 class="tituloTarjetas">Dominio premium de JavaScript</h3>
+                        <div class="etiquetaTarjeta">Premium</div>
+                        <p class="parrafoTarjetas">Domina JavaScript con definiciones avanzadas, <br>
+                        diagramas de lógica y acceso completo a todos <br>
+                        los recursos.</p>
+                        <ul class="listasTarjetas">
+                            <li>1000+ términos JS</li>
+                            <li>Definiciones claras</li>
+                            <li>Ejemplos de código</li>
+                            <li>Assets visuales</li>
+                            <li>Actualizaciones <br>de por vida</li>
+                        </ul>
+                        <p class="valorSuscripcionTarjetas">$14.999 COP</p>
+                        <button class="botonesTarjetas">Añadir al carrito</button>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <Footer id="PieDePagina">
+            <p id="autor">Autor: Jesús Geliz Nuñez</p>
+        </Footer>
+        <script src="./main.js"></script>
+    </body>
+</html>
