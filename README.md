@@ -10,12 +10,12 @@ Esta es una pagina basica que ofrece paquetes de terminología para desarrollado
 * **JavaScript (Vanilla):** Lógica del carrito de compras, manejo del DOM y validación de reglas de negocio (ej. evitar compras duplicadas).
 
 # Características Principales
-1. Interfaz de usuario moderna con temática oscura.
+1. Interfaz de usuario moderna con temática clara.
 2. Catálogo de productos interactivo.
 3. **Carrito de compras funcional:**
    * Agregar productos al carrito.
    * Visualización de la cantidad de ítems en tiempo real (Notificación en el ícono).
-   * Menú desplegable para ver el resumen de la compra.
+   * Menú para ver el resumen de la compra.
    * Cálculo automático del total en Pesos Colombianos (COP).
    * Restricción de compra (máximo 1 paquete igual por usuario).
    * Opción para eliminar ítems del carrito.
