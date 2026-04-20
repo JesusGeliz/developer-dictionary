@@ -1,118 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Developer Dictionary</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <header id="encabezado">
-            <img id="logoPagina" src="./assets/icons/icons8-código-de-inspección-48.png" alt="" width="40px" height="40px">
-            <h1 id="h1">Developer Dictionary</h1>
-            
-            <div id="contenedorCarritoIcono">
-                <img id="LogoCarrito" src="./assets/icons/icons8-carrito-de-compras-48.png" alt="Carrito" width="30px" height="30px">
-                <span id="contadorCarrito">0</span>
-            </div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dictionary | Domina el Lenguaje de la Programación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <div id="menuCarrito" class="oculto">
-                <h3 style="margin-top: 0; text-align: center;">Tu Carrito</h3>
-                <div id="listaProductosCarrito">
-                    </div>
-                <div id="totalCarritoContainer">
-                    <strong>Total: </strong><span id="totalCarrito">$0 COP</span>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="./assets/img/logo-principal.png" alt="Logo Developer Dictionary" class="logo-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iNDAiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMGUwZTAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TE9HTzwvdGV4dD48L3N2Zz4='">
+            <span class="logo-text">Developer Dictionary</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#propuesta">Propuesta</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+            </ul>
+        </nav>
+        <button class="cart-btn" id="open-cart" title="Ver Carrito">
+            🛒 Carrito <span id="cart-count" class="badge">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero text-center has-bg-image">
+            <div class="container hero-content">
+                <div class="distintivo-uno-azul">
+                    <span class="dot"></span> Desde el politecnico mayor
                 </div>
-                <button id="btnPagar" class="botonesTarjetas" style="width: 100%; margin-top: 15px; font-size: 14px;">Proceder al Pago</button>
-            </div>
-        </header>
-
-        <section id="sectionUno">
-            <div id="contenedorLogosRedes">
-                <a href="https://www.instagram.com/jesusgelizz_/" target="_blank" class="boton-imagen">
-                    <img class="logosRedes" src="./assets/img/instagram-new.png" alt="Ir a Instagram" width="30px">
-                </a>
-                <a href="mailto:jesusgeliz800@gmail.com" target="_blank" class="boton-imagen">
-                    <img class="logosRedes" src="./assets/img/gmail-new.png" alt="Ir a Instagram" width="30px">
-                </a>
-            </div>
-            <div id="hero">
-                <h2>¡Enriquece tu conocimiento!</h2>
-                <img id="logosLenguajesHero" src="./assets/img/kindpng_4529239.png" alt="" width="300px">
-                <h4>Domina el vocabulario del desarrollo. Explora nuestra colección de <br>
-                    paquetes de terminología de programación, desde definiciones básicas <br>
-                    hasta conceptos avanzados<span id="cursor"></span>
-                </h4>
-            </div>
-        </section>
-
-        <section id="sectionDos">
-            <h2>Paquetes de Terminología</h2>
-            <div id="contenedorTarjetas">
-                <div class="tarjetas" id="tarjetaUno">
-                    <div class="contenidoTarjetas">
-                        <img class="logoTarjetas" src="./assets/img/CSS3_logo_and_wordmark.svg.png" alt="" width="100px">
-                        <h3 class="tituloTarjetas">Paquete de definiciones HTML</h3>
-                        <div class="etiquetaTarjeta">Basico</div>
-                        <p class="parrafoTarjetas">Comienza tu viaje en el desarrollo con <br>
-                        definiciones esenciales de HTML y semántica <br>
-                        web básica.</p>
-                        <ul class="listasTarjetas">
-                            <li>200+ términos HTML</li>
-                            <li>Definiciones claras</li>
-                            <li>Ejemplos de código</li>
-                            <li>Actualizaciones <br>de por vida</li>
-                        </ul>
-                        <p class="valorSuscripcionTarjetas">4.999 COP</p>
-                        <button class="botonesTarjetas" id="botonGratisTarjetas">Añadir al carrito</button>
-                    </div>  
-                </div>
-
-                <div class="tarjetas" id="tarjetaDos">
-                    <div class="contenidoTarjetas">
-                        <img class="logoTarjetas" src="./assets/img/css3(1).png" alt="" width="90px">
-                        <h3 class="tituloTarjetas">Ejemplos interactivos de CSS</h3>
-                        <div class="etiquetaTarjeta">Estandar</div>
-                        <p class="parrafoTarjetas">Profundiza en el estilizado con ejemplos <br>
-                        interactivos, assets visuales y explicaciones <br>
-                        detalladas.</p>
-                        <ul class="listasTarjetas">
-                            <li>500+ términos CSS</li>
-                            <li>Definiciones claras</li>
-                            <li>Ejemplos de código</li>
-                            <li>Assets visuales</li>
-                            <li>Actualizaciones <br>de por vida</li>
-                        </ul>
-                        <p class="valorSuscripcionTarjetas">$9.999 COP</p>
-                        <button class="botonesTarjetas">Añadir al carrito</button>
-                    </div>
-                    
-                </div>
-                <div class="tarjetas" id="tarjetaTres">
-                    <div class="contenidoTarjetas">
-                        <img class="logoTarjetas" src="./assets/img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="" width="105px">
-                        <h3 class="tituloTarjetas">Dominio premium de JavaScript</h3>
-                        <div class="etiquetaTarjeta">Premium</div>
-                        <p class="parrafoTarjetas">Domina JavaScript con definiciones avanzadas, <br>
-                        diagramas de lógica y acceso completo a todos <br>
-                        los recursos.</p>
-                        <ul class="listasTarjetas">
-                            <li>1000+ términos JS</li>
-                            <li>Definiciones claras</li>
-                            <li>Ejemplos de código</li>
-                            <li>Assets visuales</li>
-                            <li>Actualizaciones <br>de por vida</li>
-                        </ul>
-                        <p class="valorSuscripcionTarjetas">$14.999 COP</p>
-                        <button class="botonesTarjetas">Añadir al carrito</button>
-                    </div> 
+                <h1 class="hero-title text-white">Domina el Lenguaje de los Desarrolladores</h1>
+                <p class="hero-paragraph text-light">Aprende la terminología técnica que utilizan los programadores profesionales. Acelera tu comprensión del código y comunícate con confianza en cualquier equipo de desarrollo.</p>
+                <div class="hero-buttons">
+                    <a href="#paquetes" class="btn-primary">Ver Paquetes</a>
+                    <a href="#metodologia" class="btn-secondary">Conocer Más</a>
                 </div>
             </div>
         </section>
 
-        <Footer id="PieDePagina">
-            <p id="autor">Autor: Jesús Geliz Nuñez</p>
-        </Footer>
-        <script src="./main.js"></script>
-    </body>
+        <section class="stats text-center bg-white">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <p class="stat-text">Términos Incluidos</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12,000+</div>
+                    <p class="stat-text">Estudiantes Activos</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <p class="stat-text">Satisfacción</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="propuesta" class="info-section propuesta bg-white">
+            <div class="container text-center">
+                <div class="distintivo-dos-azul" class="distintivo">Propuesta de Valor</div>
+                <h2 class="section-title">¿Por qué dominar la terminología?</h2>
+                <p class="section-paragraph">El léxico técnico es la llave que abre las puertas del mundo profesional del desarrollo de software.</p>
+                
+                <div class="cards-grid is-light">
+                    <div class="card is-light">
+                        <div class="card-icon is-verde"><img src="./assets/img/logo acelerar.png" alt="" height="50px" width="50px"></div>
+                        <h3 class="card-title">Acelera tu Aprendizaje</h3>
+                        <p class="card-text">Comprende documentación técnica, tutoriales y código de otros desarrolladores sin perderte en la jerga.</p>
+                    </div>
+                    <div class="card is-light">
+                        <div class="card-icon is-verde"><img src="./assets/img/logo comunidad.png" alt="" height="50px" width="50px"></div>
+                        <h3 class="card-title">Comunícate con Claridad</h3>
+                        <p class="card-text">Participa en reuniones, code reviews y discusiones técnicas con la confianza de quien domina el idioma.</p>
+                    </div>
+                    <div class="card is-light">
+                        <div class="card-icon is-verde"><img src="./assets/img/logo empleo.png" alt="" height="50px" width="50px"></div>
+                        <h3 class="card-title">Mejora tu Empleabilidad</h3>
+                        <p class="card-text">Destaca en entrevistas técnicas y demuestra que hablas el mismo idioma que los equipos de desarrollo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="info-section metodologia bg-dark">
+            <div class="container text-center">
+                <div class="distintivo-dos-azul" class="distintivo">Metodología</div>
+                <h2 class="section-title text-white">Cómo están estructurados los paquetes</h2>
+                <p class="section-paragraph text-light">Diseñados por expertos para maximizar tu retención y comprensión del léxico técnico.</p>
+                
+                <div class="cards-grid is-dark">
+                    <div class="card is-dark">
+                        <div class="card-number">01</div>
+                        <h3 class="card-title text-white">Glosarios Categorizados</h3>
+                        <p class="card-text text-light">Términos organizados por área: Frontend, Backend, DevOps, Bases de Datos y Arquitectura.</p>
+                    </div>
+                    <div class="card is-dark">
+                        <div class="card-number">02</div>
+                        <h3 class="card-title text-white">Ejemplos Prácticos</h3>
+                        <p class="card-text text-light">Cada concepto viene acompañado de fragmentos de código real y escenarios de uso.</p>
+                    </div>
+                    <div class="card is-dark">
+                        <div class="card-number">03</div>
+                        <h3 class="card-title text-white">Etimología y Origen</h3>
+                        <p class="card-text text-light">Conoce el origen de cada término para entender mejor su significado técnico.</p>
+                    </div>
+                    <div class="card is-dark">
+                        <div class="card-number">04</div>
+                        <h3 class="card-title text-white">Tarjetas de Repaso</h3>
+                        <p class="card-text text-light">Sistema de flashcards digitales para practicar y reforzar tu memoria técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paquetes" class="info-section paquetes bg-white">
+            <div class="container text-center">
+                <div class="distintivo-dos-azul">Propuesta de Valor</div>
+                <h2 class="section-title">Elige tu nivel de dominio</h2>
+                <p class="section-paragraph">Selecciona el paquete que mejor se adapte a tus necesidades y comienza a hablar el idioma técnico.</p>
+                
+                <div class="cards-grid is-light">
+                    <div class="card is-light">
+                        <h3 class="card-title">Fundamentos</h3>
+                        <p class="card-text">Lógica de programación, bases de datos y web básica.</p>
+                        <div class="card-price">$19.999 COP</div>
+                        <button class="add-to-cart btn-primary" 
+                                data-id="1" 
+                                data-name="Paquete Fundamentos" 
+                                data-price="19999">
+                            Añadir al carrito
+                        </button>
+                    </div>
+
+                    <div class="card is-light">
+                        <h3 class="card-title">Full Stack</h3>
+                        <p class="card-text">APIs, seguridad, DevOps básico y arquitecturas cliente-servidor.</p>
+                        <div class="card-price">$49.999 COP</div>
+                        <button class="add-to-cart btn-primary" 
+                                data-id="2" 
+                                data-name="Paquete Full Stack" 
+                                data-price="49999">
+                            Añadir al carrito
+                        </button>
+                    </div>
+
+                    <div class="card is-light">
+                        <h3 class="card-title">Arquitecto</h3>
+                        <p class="card-text">Patrones de diseño, microservicios, nube y gestión técnica.</p>
+                        <div class="card-price">$99.999 COP</div>
+                        <button class="add-to-cart btn-primary" 
+                                data-id="3" 
+                                data-name="Paquete Arquitecto" 
+                                data-price="99999">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidad" class="info-section comunidad bg-white">
+            <div class="container text-center">
+                <div class="distintivo-dos-azul" class="distintivo">Comunidad</div>
+                <h2 class="section-title">Únete a nuestro proyecto cooperativo</h2>
+                <p class="section-paragraph">Más que un producto, somos una comunidad de desarrolladores comprometidos con el aprendizaje continuo.</p>
+                
+                <div class="comunidad-flex">
+                    <div class="comunidad-list text-left">
+                        <div class="comunidad-item">
+                            <div class="item-content">
+                                <h4 class="item-title">Soporte Directo</h4>
+                                <p class="item-text">Acceso a nuestro canal de Discord exclusivo donde puedes resolver dudas con mentores y otros estudiantes.</p>
+                            </div>
+                        </div>
+                        <div class="comunidad-item">
+                            <div class="item-content">
+                                <h4 class="item-title">Actualizaciones Continuas</h4>
+                                <p class="item-text">La tecnología evoluciona y nuestros glosarios también. Recibe nuevos términos y actualizaciones sin costo adicional.</p>
+                            </div>
+                        </div>
+                        <div class="comunidad-item">
+                            <div class="item-content">
+                                <h4 class="item-title">Certificado de Dominio</h4>
+                                <p class="item-text">Al completar un paquete, obtén un certificado verificable que puedes añadir a tu LinkedIn y CV.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comunidad-image">
+                        <img src="./assets/img/comunidad-programadores.webp" alt="Equipo cooperativo trabajando" class="img-responsive" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTBlMGUwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPklNQUdFTjwvdGV4dD48L3N2Zz4='">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center bg-dark text-white p-20">
+        <p>&copy; 2026 Developer Dictionary. Un proyecto realizado por Jesus Geliz - Politecnico Mayor.</p>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" id="close-cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <p class="empty-cart-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="total-price">0</span></div>
+            <button class="btn-primary checkout-btn">Proceder al Pago</button>
+        </div>
+    </aside>
+
+    <script src="./main.js"></script>
+</body>
 </html>
