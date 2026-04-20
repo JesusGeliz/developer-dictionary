@@ -8,7 +8,7 @@ function removeFromCart(id) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Elementos del DOM
+    // Elementos del DOM del carrito
     const cartBtn = document.getElementById('open-cart');
     const closeCartBtn = document.getElementById('close-cart');
     const cartDrawer = document.getElementById('cart-drawer');
@@ -154,4 +154,72 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Animación de los Contadores
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100; // Velocidad de la animación (menor es más rápido)
+
+    if (counters.length > 0) {
+        // Usamos IntersectionObserver para que la animación inicie al hacer scroll
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    
+                    const updateCount = () => {
+                        // Convertimos el texto actual a número (quitando puntos si los hay)
+                        const count = +counter.innerText.replace(/\./g, ''); 
+                        const inc = target / speed; // Incremento dinámico
+
+                        if (count < target) {
+                            // Sumamos y aplicamos formato de miles
+                            counter.innerText = Math.ceil(count + inc).toLocaleString('es-CO');
+                            // Repetimos la función cada 15 milisegundos
+                            setTimeout(updateCount, 15);
+                        } else {
+                            // Aseguramos que termine exactamente en el número objetivo
+                            counter.innerText = target.toLocaleString('es-CO');
+                        }
+                    };
+                    
+                    updateCount();
+                    // Dejamos de observar para que la animación ocurra solo una vez
+                    observer.unobserve(counter); 
+                }
+            });
+        }, { threshold: 0.5 }); // Se activa cuando la sección está visible al 50%
+
+        // Iniciamos la observación a cada contador
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    }
 });
+
+// Indicador de Navegación Activa (Scrollspy)
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Si la sección es visible en la pantalla
+            if (entry.isIntersecting) {
+                const currentId = entry.target.getAttribute('id');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    // Si el enlace coincide con la sección actual, le damos la clase activa
+                    if (link.getAttribute('href') === `#${currentId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        rootMargin: "-20% 0px -70% 0px" 
+    });
+
+    sections.forEach(section => {
+        scrollObserver.observe(section);
+    });
